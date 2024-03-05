@@ -1,0 +1,139 @@
+/* ******************* */
+/* Genral Sheet Styles */
+/* ******************* */
+
+.mainsheet {
+    background-color: #FFEFD5;
+    display: flex;
+    flex-wrap: wrap;
+    .bahiana-regular {
+        font-family: "Bahiana", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+             
+}
+
+.mainsheet > * {
+    flex: 1 1 250px;
+    margin: 7px;
+}
+
+.lunarsheet {
+    background-color: #B0C4DE;
+    display: flex;
+    flex-wrap: wrap;
+    .bahiana-regular {
+        font-family: "Bahiana", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+}
+
+.lunarsheet > * {
+    flex: 1 1 250px;
+    margin: 7px;
+}
+
+.solarsheet {
+    background-color: #FFEFD5;
+    display: flex;
+    flex-wrap: wrap;
+    .bahiana-regular {
+        font-family: "Bahiana", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+}
+
+
+.solarsheet > * {
+    flex: 1 1 250xp;
+    margin: 7px;
+}
+
+.abyssalsheet {
+    background-color: #A9A9A9;
+    display: flex;
+    flex-wrap: wrap;
+    .bahiana-regular {
+        font-family: "Bahiana", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+}
+
+.abyssalsheet > * {
+    flex: 1 1 250px;
+    margin: 7px;
+}
+
+.honsheet {
+    background-color: #98FB98;
+    display: flex;
+    flex-wrap: wrap;
+    .bahiana-regular {
+        font-family: "Bahiana", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+}
+
+.honsheet > * {
+    flex: 1 1 250px;
+    margin: 7px;
+}
+
+.leaguesheet {
+    background-color: #E0FFFF;
+    display: flex;
+    flex-wrap: wrap;
+    .bahiana-regular {
+        font-family: "Bahiana", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+}
+
+.leaguesheet > * {
+    flex: 1 1 250px;
+    margin: 7px;
+}
+
+<style>
+    p.main {
+        border-style: ridge;
+        border-color: rgb(205, 127, 50);
+    }
+    p.lunar {
+        border-style: ridge;
+        border-color: #AAA9AD;
+    }
+    p.solar {
+        border-style: ridge;
+        border-color: goldenrod;
+    }
+    p.abyssal {
+        border-style: ridge;
+        border-color: #708090;
+    }
+    p.hon {
+         border-style: ridge;
+         border-color: #556B2F;
+    }
+    p.league {
+        border-style: ridge;
+        border-color: #4682B4;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap')
+
+    h1.a {
+        font-family: "bahiana", sans-serif;
+    }
+
+    h1.b {
+        font-family: "bahiana", sans-serif;
+    }
+</style>
+    
