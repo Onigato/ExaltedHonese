@@ -2,7 +2,7 @@
 /* Genral Sheet Styles */
 /* ******************* */
 
-.mainsheet {
+mainsheet {
     background-color: #FFEFD5;
     display: flex;
     flex-wrap: wrap;
@@ -14,12 +14,12 @@
              
 }
 
-.mainsheet > * {
+mainsheet > * {
     flex: 1 1 250px;
     margin: 7px;
 }
 
-.lunarsheet {
+lunarsheet {
     background-color: #B0C4DE;
     display: flex;
     flex-wrap: wrap;
@@ -30,12 +30,12 @@
       }
 }
 
-.lunarsheet > * {
+lunarsheet > * {
     flex: 1 1 250px;
     margin: 7px;
 }
 
-.solarsheet {
+solarsheet {
     background-color: #FFEFD5;
     display: flex;
     flex-wrap: wrap;
@@ -47,12 +47,12 @@
 }
 
 
-.solarsheet > * {
+solarsheet > * {
     flex: 1 1 250xp;
     margin: 7px;
 }
 
-.abyssalsheet {
+abyssalsheet {
     background-color: #A9A9A9;
     display: flex;
     flex-wrap: wrap;
@@ -63,12 +63,12 @@
       }
 }
 
-.abyssalsheet > * {
+abyssalsheet > * {
     flex: 1 1 250px;
     margin: 7px;
 }
 
-.honsheet {
+honsheet {
     background-color: #98FB98;
     display: flex;
     flex-wrap: wrap;
@@ -79,12 +79,12 @@
       }
 }
 
-.honsheet > * {
+honsheet > * {
     flex: 1 1 250px;
     margin: 7px;
 }
 
-.leaguesheet {
+leaguesheet {
     background-color: #E0FFFF;
     display: flex;
     flex-wrap: wrap;
@@ -95,7 +95,7 @@
       }
 }
 
-.leaguesheet > * {
+leaguesheet > * {
     flex: 1 1 250px;
     margin: 7px;
 }
