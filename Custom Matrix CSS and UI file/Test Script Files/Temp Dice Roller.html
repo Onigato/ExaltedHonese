@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exalted Dice Roller</title>
+
+<style>
+body{
+    font-family: sans-serif;
+    background:#1a1205;
+    color:#fbbf24;
+    text-align:center;
+}
+
+input,button{
+    font-size:18px;
+    padding:6px;
+    margin:5px;
+}
+
+button{
+    background:#fbbf24;
+    border:none;
+    color:black;
+    font-weight:bold;
+}
+
+#result{
+    margin-top:20px;
+    font-size:18px;
+}
+
+.success{ color:#22c55e; }
+.ten{ color:#fde047; font-weight:bold; }
+.one{ color:#ef4444; }
+.botch{ color:red; font-weight:bold; font-size:22px;}
+.god{ color:gold; font-weight:bold; font-size:22px;}
+</style>
+
+</head>
+
+<body>
+
+<h2>🌞 Exalted Dice Roller</h2>
+
+<label>Dice Pool</label> <input id="dice" type="number" value="7">
+
+<label>Threshold</label> <input id="threshold" type="number" value="7">
+
+<label>Auto Success</label> <input id="auto" type="number" value="0">
+
+<label>Double 10s</label> <input id="double" type="checkbox">
+
+<br>
+
+<button onclick="roll()">ROLL</button>
+
+<div id="result"></div>
+
+<script>
+
+function roll(){
+
+let dice = parseInt(document.getElementById("dice").value)
+let threshold = parseInt(document.getElementById("threshold").value)
+let auto = parseInt(document.getElementById("auto").value)
+let double10 = document.getElementById("double").checked
+
+let rolls=[]
+let successes=0
+let hasOne=false
+let hasSuccess=false
+let allTen=true
+
+for(let i=0;i<dice;i++){
+
+let r=Math.floor(Math.random()*10)+1
+
+rolls.push(r)
+
+if(r!==10) allTen=false
+if(r===1) hasOne=true
+
+if(r>=threshold){
+hasSuccess=true
+
+if(r===10 && double10){
+successes+=2
+}else{
+successes+=1
+}
+}
+
+}
+
+let diceHTML=rolls.map(r=>{
+if(r===10) return `<span class="ten">${r}</span>`
+if(r>=threshold) return `<span class="success">${r}</span>`
+if(r===1) return `<span class="one">${r}</span>`
+return r
+}).join(", ")
+
+let total=successes+auto
+
+let html=`Dice: [${diceHTML}]<br>`
+
+if(allTen){
+html+=`<div class="god">GOD!</div>`
+}
+else if(!hasSuccess && hasOne){
+html+=`<div class="botch">BOTCH!</div>`
+}
+else{
+html+=`Successes: ${successes}<br>`
+if(auto>0) html+=`Auto: +${auto}<br>`
+html+=`<b>Total: ${total}</b>`
+}
+
+document.getElementById("result").innerHTML=html
+
+}
+
+</script>
+
+</body>
+</html>
